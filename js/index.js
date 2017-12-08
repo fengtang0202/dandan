@@ -73,7 +73,7 @@ $(".sevenpage>.dialog_wrap>.dialog_under").click(function(){
       registerHSlide(null, $(".photo_1"), $(".photo_2"), $(".photo_3"), null);
       registerHSlide(null, $(".photo_2"), $(".photo_3"), $(".photo_4"), null);
       registerHSlide(null, $(".photo_3"), $(".photo_4"), $(".photo_5"), null);
-      registerHSlide(null, $(".photo_4"), $(".photo_5"),$(".eightpage"), function(){
+      registerHSlide(null, $(".photo_4"), $(".photo_5"),$(".firstpage"), function(){
         $(".box").css("display","block")
         console.log($(".box").css("display"))
       });
