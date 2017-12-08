@@ -12,20 +12,12 @@ $(".dialog_under").click(function(){
     $(this).hide();
 });
  $(".btn_img").click(function(){
-      $(".box1").show()
-      console.log("box1:"+$(".box1").css("display"))
-      //
-      // $(".box").hide()
-      registerHSlide(null, null, $(".photo_1"), $(".photo_2"), null);
-      registerHSlide(null, $(".photo_1"), $(".photo_2"), $(".photo_3"), null);
-      registerHSlide(null, $(".photo_2"), $(".photo_3"), $(".photo_4"), null);
-      registerHSlide(null, $(".photo_3"), $(".photo_4"), $(".photo_5"), null);
-      registerHSlide(null, $(".photo_4"), $(".photo_5"),$(".eightpage"), function(){
-        // $(".box").css("display","block")
-        // console.log($(".box").css("display"))
-        console.log("box1:"+$(".box1").css("display"))
-        $(".box").show()
-      });
+   registerHSlide(null, $(".eightpage"), $(".photo_1"), $(".photo_2"), null);
+   registerHSlide(null, $(".photo_1"), $(".photo_2"), $(".photo_3"), null);
+   registerHSlide(null, $(".photo_2"), $(".photo_3"), $(".photo_4"), null);
+   registerHSlide(null, $(".photo_3"), $(".photo_4"), $(".photo_5"), null);
+   registerHSlide(null, $(".photo_4"), $(".photo_5"), $(".firstpage"),null)
+   console.log(1)
  })
    //  let pages=$(".page").slice(0,8)
    //  let n=pages.size()
@@ -39,7 +31,7 @@ registerSlide(null, $(".thirdpage"), $(".forthpage"), $(".fivepgae"), null);
 registerSlide(null,$(".forthpage"),$(".fivepgae"),$(".sixpage"),null)
 registerSlide(null,$(".fivepgae"),$(".sixpage"),$(".sevenpage"),null)
 registerSlide(null,$(".sixpage"),$(".sevenpage"),$(".eightpage"),null)
-registerSlide(null,$(".sevenpage"),$(".eightpage"),null,null)
+registerSlide(null,$(".sevenpage"),$(".eightpage"),$(".photo_1"),null)
 /////////////////
 
 function registerSlide(page0Do, page0, page1, page2, page2Do) {
