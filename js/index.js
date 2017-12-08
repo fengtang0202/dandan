@@ -2,82 +2,36 @@ $(document).on("touchmove",function(e){
     e.preventDefault();
 }, false);
 //点击圆点显示dialog
-$(".point_1").click(function(){
-    $(".dialog_under").show();
-    $(".tag1").addClass("show");
-});
-$(".point_2").click(function(){
-    $(".dialog_under").show();
-    $(".tag2").addClass("show");
-});
-$(".point_3").click(function(){
-    $(".dialog_under").show();
-    $(".tag3").addClass("show");
-});
-$(".point_4").click(function(){
-    $(".dialog_under").show();
-    $(".tag4").addClass("show");
-});
-$(".point_5").click(function(){
-    $(".dialog_under").show();
-    $(".tag5").addClass("show");
-});
-$(".point_6").click(function(){
-    $(".dialog_under").show();
-    $(".tag6").addClass("show");
-});
-$(".point_7").click(function(){
-    $(".dialog_under").show();
-    $(".tag7").addClass("show");
-});
-$(".point_8").click(function(){
-    $(".dialog_under").show();
-    $(".tag8").addClass("show");
-});
-$(".point_9").click(function(){
-    $(".dialog_under").show();
-    $(".tag9").addClass("show");
-});
-$(".point_10").click(function(){
-    $(".dialog_under").show();
-    $(".tag10").addClass("show");
-});
-//隐藏dialog
-$(".secondpage>.dialog_wrap>.dialog_under").click(function(){
-    $(".secondpage>.dialog_wrap>.dialog").removeClass("show");
-    $(this).hide();
-});
-$(".thirdpage>.dialog_wrap>.dialog_under").click(function(){
-    $(".thirdpage>.dialog_wrap>.dialog").removeClass("show");
-    $(this).hide();
-});
-$(".forthpage>.dialog_wrap>.dialog_under").click(function(){
-    $(".forthpage>.dialog_wrap>.dialog").removeClass("show");
-    $(this).hide();
-});
-$(".fivepgae>.dialog_wrap>.dialog_under").click(function(){
-    $(".fivepgae>.dialog_wrap>.dialog").removeClass("show");
-    $(this).hide();
-});
-$(".sixpage>.dialog_wrap>.dialog_under").click(function(){
-    $(".sixpage>.dialog_wrap>.dialog").removeClass("show");
-    $(this).hide();
-});
-$(".sevenpage>.dialog_wrap>.dialog_under").click(function(){
-    $(".sevenpage>.dialog_wrap>.dialog").removeClass("show");
+$(".point").click(function(){
+  var index=$(this).attr("class").slice(12,13)
+  $(".dialog_under").show()
+  $(`.tag${index}`).addClass("show")
+})
+$(".dialog_under").click(function(){
+    $(".dialog").removeClass("show");
     $(this).hide();
 });
  $(".btn_img").click(function(){
       $(".box1").show()
+      console.log("box1:"+$(".box1").css("display"))
+      //
+      // $(".box").hide()
       registerHSlide(null, null, $(".photo_1"), $(".photo_2"), null);
       registerHSlide(null, $(".photo_1"), $(".photo_2"), $(".photo_3"), null);
       registerHSlide(null, $(".photo_2"), $(".photo_3"), $(".photo_4"), null);
       registerHSlide(null, $(".photo_3"), $(".photo_4"), $(".photo_5"), null);
-      registerHSlide(null, $(".photo_4"), $(".photo_5"),$(".firstpage"), function(){
-        $(".box").css("display","block")
-        console.log($(".box").css("display"))
+      registerHSlide(null, $(".photo_4"), $(".photo_5"),$(".eightpage"), function(){
+        // $(".box").css("display","block")
+        // console.log($(".box").css("display"))
+        console.log("box1:"+$(".box1").css("display"))
+        $(".box").show()
       });
  })
+   //  let pages=$(".page").slice(0,8)
+   //  let n=pages.size()
+   //  for(var i=0;i<n;i++){
+   //   registerSlide(null,null,)
+   // }
 registerSlide(null, null, $(".firstpage"), $(".secondpage"), null);
 registerSlide(null, $(".firstpage"), $(".secondpage"), $(".thirdpage"),null);
 registerSlide(null, $(".secondpage"), $(".thirdpage"), $(".forthpage"),null);
@@ -128,7 +82,8 @@ function registerSlide(page0Do, page0, page1, page2, page2Do) {
         if (page1.attr("touchable") == "false" || start_y == Infinity)
             return;
         var delta_y = e.originalEvent.targetTouches[0].pageY - start_y;
-        if (delta_y <= 0) {
+        // console.log(e.originalEvent.targetTouches[0])
+        if (delta_y <=0) {
             if (page2 != null) {
                 page1.css("animation", "1");
                 page1.css("-webkit-animation", "1");
@@ -277,8 +232,8 @@ function registerHSlide(page0Do, page0, page1, page2, page2Do) {
             if (page0 != null) {
                 if (page2 != null)
                     page2.css("visibility", "hidden");
-                page0.css("animation", "slidetoorigin .4s forwards ease-out");
-                page0.css("-webkit-animation", "slidetoorigin .4s forwards ease-out");
+                page0.css("animation", "slidetoorigin1 .4s forwards ease-out");
+                page0.css("-webkit-animation", "slidetoorigin1 .4s forwards ease-out");
                 page1.attr("touchable", "false");
                 setTimeout(function () {
                     page0.attr("touchable", "true");
@@ -294,8 +249,8 @@ function registerHSlide(page0Do, page0, page1, page2, page2Do) {
             }
         } else {
             if (page2 != null) {
-                page1.css("animation", "slidetoorigin .1s forwards ease-out");
-                page1.css("-webkit-animation", "slidetoorigin .1s forwards ease-out");
+                page1.css("animation", "slidetoorigin1 .1s forwards ease-out");
+                page1.css("-webkit-animation", "slidetoorigin1 .1s forwards ease-out");
             }
             if (page0 != null) {
                 page0.css("animation", "slidetoleft .1s forwards ease-out");

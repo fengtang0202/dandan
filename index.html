@@ -10,29 +10,31 @@
         @-webkit-keyframes slidetotop { 100% { top:-100%; opacity:0; } }
         @keyframes slidetoorigin { 100% { top:0; opacity:1; } }
         @-webkit-keyframes slidetoorigin { 100% { top:0; opacity:1; } }
+        @keyframes transy { 0% { transform:translateY(0%); }  50% { transform:translateY(-40%); }  100% { transform:translateY(0%); } }
+        @-webkit-keyframes transy { 0% { -webkit-transform:translateY(0%); }  50% { -webkit-transform:translateY(-40%); }  100% { -webkit-transform:translateY(0%); } }
         /*//////////*/
         @keyframes slidetoleft { 100% { left:-100%; opacity:0; } }
         @-webkit-keyframes slidetoleft { 100% { left:-100%; opacity:0; } }
-        @keyframes slidetoorigin { 100% { left:0; opacity:1; } }
-        @-webkit-keyframes slidetoorigin { 100% { left:0; opacity:1; } }
+        @keyframes slidetoorigin1 { 100% { left:0; opacity:1; } }
+        @-webkit-keyframes slidetoorigin1 { 100% { left:0; opacity:1; } }
         /*//////////*/
         body { transition: all 1s linear;font-size:62.5%;margin:0; padding:0;overflow:hidden; font-family:"Microsoft YaHei";color:#fff; -webkit-user-drag:none; -webkit-tap-highlight-color:rgba(0, 0, 0, 0); }
         p{margin:0;}
         .page{ display:flex; flex-direction:column;align-items:center; position:absolute; width:750px; height:100%;overflow:hidden;}
-        .firstpage{  background:url("./images/1.jpg") no-repeat;z-index:8; }
-        .secondpage{ background:url("./images/2.jpg") no-repeat;z-index:7; }
-        .thirdpage { background:url("./images/3.jpg") no-repeat;z-index:6; }
-        .forthpage { background:url("./images/4.jpg") no-repeat;z-index:5; }
-        .fivepgae { background:url("./images/5.jpg") no-repeat;z-index:4; }
-        .sixpage { background:url("./images/6.jpg") no-repeat;z-index:3; }
-        .sevenpage{background:url("./images/7.jpg") no-repeat;z-index:2;}
-        .eightpage{background:url("./images/8.jpg") no-repeat;z-index:1;}
+        .firstpage{  background:url("./images/1.jpg") no-repeat;background-size:100% 100%;z-index:8; }
+        .secondpage{ background:url("./images/2.jpg") no-repeat;background-size:100% 100%;z-index:7; }
+        .thirdpage { background:url("./images/3.jpg") no-repeat;background-size:100% 100%;z-index:6; }
+        .forthpage { background:url("./images/4.jpg") no-repeat;background-size:100% 100%;z-index:5; }
+        .fivepgae { background:url("./images/5.jpg") no-repeat;background-size:100% 100%;z-index:4; }
+        .sixpage { background:url("./images/6.jpg") no-repeat;background-size:100% 100%;z-index:3; }
+        .sevenpage{background:url("./images/7.jpg") no-repeat;background-size:100% 100%;z-index:2;}
+        .eightpage{background:url("./images/8.jpg") no-repeat;background-size:100% 100%;z-index:1;}
           /*/////////////*/
-          .photo_1 { background:url("./images/p_2.jpg") no-repeat;z-index:5;background-size:100%;}
-          .photo_2{background:url("./images/p_1.jpg") no-repeat;z-index:4;background-size:100%;}
-          .photo_3{background:url("./images/p_3.jpg") no-repeat;z-index:3;background-size:100%;}
-          .photo_4{background:url("./images/p_4.jpg") no-repeat;z-index:2;background-size:100%;}
-          .photo_5{background:url("./images/p_5.jpg") no-repeat;z-index:1;background-size:100%;}
+          .photo_1 { background:url("./images/p_2.jpg") no-repeat;z-index:5;background-size:100% 100%;}
+          .photo_2{background:url("./images/p_1.jpg") no-repeat;z-index:4;background-size:100% 100%;}
+          .photo_3{background:url("./images/p_3.jpg") no-repeat;z-index:3;background-size:100% 100%;}
+          .photo_4{background:url("./images/p_4.jpg") no-repeat;z-index:2;background-size:100% 100%;}
+          .photo_5{background:url("./images/p_5.jpg") no-repeat;z-index:1;background-size:100% 100%;}
         .arrow1:before {content: "";display: block;width: 20px;height: 20px;margin-left: 3px;margin-top: 4px;border: #250332 1px solid;transform: rotate(45deg);-webkit-transform: rotate(45deg);}
         /*底部的2个箭头*/
         .bottom { position:absolute; bottom:0; left:0; width:100%; height:62px; }
@@ -105,7 +107,7 @@
         <div class="bottom">
             <div class="slide"><div class="arrow1"></div><div class="arrow2"></div></div>
         </div>
-    </section>
+      </section>
       <section class="page thirdpage">
         <img class="point point_2" src="./images/dd.gif" alt="">
         <div class="dialog_wrap">
@@ -131,7 +133,7 @@
         <div class="bottom">
             <div class="slide"><div class="arrow1"></div><div class="arrow2"></div></div>
         </div>
-    </section>
+      </section>
       <section class="page forthpage">
         <img class="point point_3" src="./images/dd.gif" alt="">
         <div class="dialog_wrap">
@@ -154,7 +156,7 @@
         <div class="bottom">
             <div class="slide"><div class="arrow1"></div><div class="arrow2"></div></div>
         </div>
-    </section>
+      </section>
       <section class="page fivepgae">
          <img class="point point_4" src="./images/dd.gif" alt="">
          <!--dialog-->
@@ -179,7 +181,7 @@
          <div class="bottom">
              <div class="slide"><div class="arrow1"></div><div class="arrow2"></div></div>
          </div>
-     </section>
+      </section>
       <section class="page sixpage">
         <img class="point point_5" src="./images/dd.gif" alt="">
         <img class="point point_6" src="./images/dd.gif" alt="">
@@ -197,7 +199,7 @@
                      </p>
                  </div>
              </div>
-         </div>
+          </div>
             <div class="dialog tag tag6">
                 <div class=" bg2">
                     <img  src="images/d6-1_03.jpg">
@@ -224,8 +226,8 @@
                     </div>
                 </div>
             </div>
-        <div class="dialog_under"></div>
-    </div>
+         <div class="dialog_under"></div>
+        </div>
         <div class="bottom">
             <div class="slide"><div class="arrow1"></div><div class="arrow2"></div></div>
         </div>
@@ -282,7 +284,7 @@
         <div class="bottom">
             <div class="slide"><div class="arrow1"></div><div class="arrow2"></div></div>
         </div>
-    </section>
+      </section>
       <section class="page eightpage">
         <div class="btn_img">
           <strong id="jump_btn" >更多美图</strong>
@@ -291,19 +293,23 @@
           <div class="slide"><div class="arrow1"></div><div class="arrow2"></div></div>
         </div>
       </section>
-    </div>
+     </div>
     <div class="box1" style='display:none'>
       <section class="page photo_1">
         <div class="btn_left">
             <div class="btn_wrap">
-              <i>></i>
+
             </div>
         </div>
       </section>
-      <section class="page photo_2"></section>
-      <section class="page photo_3"></section>
-      <section class="page photo_4"></section>
-      <section class="page photo_5"></section>
+      <section class="page photo_2">
+      </section>
+      <section class="page photo_3">
+      </section>
+      <section class="page photo_4">
+      </section>
+      <section class="page photo_5">
+      </section>
     </div>
 </body>
 <script src='./js/index.js'></script>
