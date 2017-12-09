@@ -2,14 +2,15 @@ $(document).on("touchmove",function(e){
     e.preventDefault();
 }, false);
 //点击圆点显示dialog
-$(".point").click(function(){
+// click =>touchstart
+$(".point").on("touchstart",function(){
   var index=$(this).attr("class").slice(-1)
   $(".dialog_under").show()
   $(`.tag${index}`).addClass("show")
   console.log($(`.tag${index}`))
   console.log($(this))
 })
-$(".dialog_under").click(function(){
+$(".dialog_under").on("touchstart",function(){
     $(".dialog").removeClass("show");
     $(this).hide();
 });
