@@ -3,9 +3,11 @@ $(document).on("touchmove",function(e){
 }, false);
 //点击圆点显示dialog
 $(".point").click(function(){
-  var index=$(this).attr("class").slice(12,13)
+  var index=$(this).attr("class").slice(-1)
   $(".dialog_under").show()
   $(`.tag${index}`).addClass("show")
+  console.log($(`.tag${index}`))
+  console.log($(this))
 })
 $(".dialog_under").click(function(){
     $(".dialog").removeClass("show");
