@@ -44,7 +44,26 @@ registerSlide(null,$(".fivepgae"),$(".sixpage"),$(".sevenpage"),null)
 registerSlide(null,$(".sixpage"),$(".sevenpage"),$(".eightpage"),null)
 registerSlide(null,$(".sevenpage"),$(".eightpage"),null,null)
 /////////////////
-
+let speed=10
+function move(){
+  let right=parseFloat($(".right_arrow").css("right"))
+    // console.log(right)
+    right-=speed
+    if(right<20||right>0) speed*=-1
+    $(".right_arrow").css("right",right)
+  }
+setInterval(move,500)
+let speed_right=10
+function move1(){
+  let left=parseFloat($(".left_arrow").css("left"))
+    console.log(left)
+    left+=speed_right
+    console.log(left)
+    if(left<0||left>10) speed_right*=-1
+    $(".left_arrow").css("left",left)
+}
+move1()
+setInterval(move1,500)
 function registerSlide(page0Do, page0, page1, page2, page2Do) {
     //上滑事件
     var start_y;
