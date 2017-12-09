@@ -15,12 +15,20 @@ $(".dialog_under").on("touchstart",function(){
     $(this).hide();
 });
  $(".btn_img").click(function(){
-   registerHSlide(null, $(".eightpage"), $(".photo_1"), $(".photo_2"), null);
-   registerHSlide(null, $(".photo_1"), $(".photo_2"), $(".photo_3"), null);
-   registerHSlide(null, $(".photo_2"), $(".photo_3"), $(".photo_4"), null);
-   registerHSlide(null, $(".photo_3"), $(".photo_4"), $(".photo_5"), null);
-   registerHSlide(null, $(".photo_4"), $(".photo_5"), $(".firstpage"),null)
-   console.log(1)
+   let page=$(this).parent()
+   // page.css({"transition":"all .4s ease-out","opcity":0,"left":"-100%"})
+   page.css("left",0)
+   page.css("-webkit-animation", "slidetoleft .4s forwards ease-out");
+     $(".photo").css({"animation":1,"left":0,"opacity":1,"visibility":"visible"})
+     $(".photo").attr("touchable",true)
+   // $(".page").css("visible","hidden")
+ })
+ registerHSlide(null, null, $(".photo_1"), $(".photo_2"), null);
+ registerHSlide(null, $(".photo_1"), $(".photo_2"), $(".photo_3"), null);
+ registerHSlide(null, $(".photo_2"), $(".photo_3"), $(".photo_4"), null);
+ registerHSlide(null, $(".photo_3"), $(".photo_4"), $(".photo_5"), null);
+ registerHSlide(null, $(".photo_4"), $(".photo_5"), $(".eightpage"),function(){
+   $(".page").css({"visibility":"visible",top:0})
  })
    //  let pages=$(".page").slice(0,8)
    //  let n=pages.size()
@@ -34,7 +42,7 @@ registerSlide(null, $(".thirdpage"), $(".forthpage"), $(".fivepgae"), null);
 registerSlide(null,$(".forthpage"),$(".fivepgae"),$(".sixpage"),null)
 registerSlide(null,$(".fivepgae"),$(".sixpage"),$(".sevenpage"),null)
 registerSlide(null,$(".sixpage"),$(".sevenpage"),$(".eightpage"),null)
-registerSlide(null,$(".sevenpage"),$(".eightpage"),$(".photo_1"),null)
+registerSlide(null,$(".sevenpage"),$(".eightpage"),null,null)
 /////////////////
 
 function registerSlide(page0Do, page0, page1, page2, page2Do) {
@@ -145,8 +153,9 @@ function registerSlide(page0Do, page0, page1, page2, page2Do) {
     });
 }
 function registerHSlide(page0Do, page0, page1, page2, page2Do) {
-    //上滑事件
+    //左滑事件
     var start_x;
+    console.log(1)
     page1.on("touchstart", function (e) {
         if (page1.attr("touchable") == "false") {
             start_x = Infinity;
@@ -207,7 +216,7 @@ function registerHSlide(page0Do, page0, page1, page2, page2Do) {
         if (delta_x < -80) {
             if (page2 != null) {
                 if (page0 != null)
-                    page0.css("visibility", "hidden");
+                page0.css("visibility", "hidden");
                 page1.css("animation", "slidetoleft .4s forwards ease-out");
                 page1.css("-webkit-animation", "slidetoleft .4s forwards ease-out");
                 page1.attr("touchable", "false");

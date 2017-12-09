@@ -28,7 +28,7 @@
         .fivepgae { background:url("./images/5.jpg") no-repeat;background-size:100% 100%;z-index:9; }
         .sixpage { background:url("./images/6.jpg") no-repeat;background-size:100% 100%;z-index:8; }
         .sevenpage{background:url("./images/7.jpg") no-repeat;background-size:100% 100%;z-index:7;}
-        .eightpage{background:url("./images/8.jpg") no-repeat;background-size:100% 100%;z-index:6;}
+        .eightpage{background:url("./images/8.jpg") no-repeat;background-size:100% 100%;z-index:6;opacity:1}
           /*/////////////*/
           .photo_1 { background:url("./images/p_2.jpg") no-repeat;z-index:5;background-size:100% 100%;}
           .photo_2{background:url("./images/p_1.jpg") no-repeat;z-index:4;background-size:100% 100%;}
@@ -76,6 +76,11 @@
      </style>
 </head>
 <body>
+      <section class="page firstpage">
+       <div class="bottom">
+           <div class="slide"><div class="arrow1"></div><div class="arrow2"></div></div>
+       </div>
+      </section>
       <section class="page secondpage">
         <!--触发事件的元素-->
         <img class="point point_1" src="./images/dd.gif" alt="">
@@ -286,20 +291,20 @@
           <div class="slide"><div class="arrow1"></div><div class="arrow2"></div></div>
         </div>
       </section>
-      <section class="page photo_1">
+      <section class="page photo_1 photo">
         <div class="btn_left">
             <div class="btn_wrap">
 
             </div>
         </div>
       </section>
-      <section class="page photo_2">
+      <section class="page photo_2 photo">
       </section>
-      <section class="page photo_3">
+      <section class="page photo_3 photo">
       </section>
-      <section class="page photo_4">
+      <section class="page photo_4 photo">
       </section>
-      <section class="page photo_5">
+      <section class="page photo_5 photo">
       </section>
 </body>
 <script src='./js/index.js'></script>
