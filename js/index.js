@@ -7,8 +7,6 @@ $(".point").on("touchstart",function(){
   var index=$(this).attr("class").slice(-1)
   $(".dialog_under").show()
   $(`.tag${index}`).addClass("show")
-  console.log($(`.tag${index}`))
-  console.log($(this))
 })
 $(".dialog_under").on("touchstart",function(){
     $(".dialog").removeClass("show");
@@ -16,12 +14,10 @@ $(".dialog_under").on("touchstart",function(){
 });
  $(".btn_img").click(function(){
    let page=$(this).parent()
-   // page.css({"transition":"all .4s ease-out","opcity":0,"left":"-100%"})
    page.css("left",0)
    page.css("-webkit-animation", "slidetoleft .4s forwards ease-out");
      $(".photo").css({"animation":1,"left":0,"opacity":1,"visibility":"visible"})
      $(".photo").attr("touchable",true)
-   // $(".page").css("visible","hidden")
  })
  window.onload=function(){
    $(".point").css("display","block")
