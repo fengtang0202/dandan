@@ -23,6 +23,10 @@ $(".dialog_under").on("touchstart",function(){
      $(".photo").attr("touchable",true)
    // $(".page").css("visible","hidden")
  })
+ window.onload=function(){
+   $(".point").css("display","block")
+   $(".btn_img").css("display","block")
+ }
  registerHSlide(null, null, $(".photo_1"), $(".photo_2"), null);
  registerHSlide(null, $(".photo_1"), $(".photo_2"), $(".photo_3"), null);
  registerHSlide(null, $(".photo_2"), $(".photo_3"), $(".photo_4"), null);
@@ -35,7 +39,7 @@ $(".dialog_under").on("touchstart",function(){
    //  for(var i=0;i<n;i++){
    //   registerSlide(null,null,)
    // }
-registerSlide(null, null, $(".firstpage"), $(".secondpage"), null);
+registerSlide(null, null, $(".firstpage"), $(".secondpage"),null);
 registerSlide(null, $(".firstpage"), $(".secondpage"), $(".thirdpage"),null);
 registerSlide(null, $(".secondpage"), $(".thirdpage"), $(".forthpage"),null);
 registerSlide(null, $(".thirdpage"), $(".forthpage"), $(".fivepgae"), null);
@@ -56,9 +60,7 @@ setInterval(move,500)
 let speed_right=10
 function move1(){
   let left=parseFloat($(".left_arrow").css("left"))
-    console.log(left)
     left+=speed_right
-    console.log(left)
     if(left<0||left>10) speed_right*=-1
     $(".left_arrow").css("left",left)
 }
@@ -174,7 +176,6 @@ function registerSlide(page0Do, page0, page1, page2, page2Do) {
 function registerHSlide(page0Do, page0, page1, page2, page2Do) {
     //左滑事件
     var start_x;
-    console.log(1)
     page1.on("touchstart", function (e) {
         if (page1.attr("touchable") == "false") {
             start_x = Infinity;

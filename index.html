@@ -18,6 +18,7 @@
         @-webkit-keyframes slidetoleft { 100% { left:-100%; opacity:0; } }
         @keyframes slidetoorigin1 { 100% { left:0; opacity:1; } }
         @-webkit-keyframes slidetoorigin1 { 100% { left:0; opacity:1; } }
+        @keyframes fadein { 0% {opacity:0;} 100% {opacity:1;} }
         /*//////////*/
         body { transition: all 1s linear;font-size:62.5%;margin:0; padding:0;overflow:hidden; font-family:"Microsoft YaHei";color:#fff; -webkit-user-drag:none; -webkit-tap-highlight-color:rgba(0, 0, 0, 0); }
         p{margin:0;}
@@ -44,7 +45,7 @@
         .slide>.arrow1:before {content:""; display: block; width:20px; height:20px; margin-left:3px; margin-top:4px; border:#fff 1px solid; transform:rotate(45deg); -webkit-transform:rotate(45deg); }
         .slide>.arrow2 { width:28px; height:14px; margin:0 auto 2px; overflow:hidden; animation:transy 1s infinite ease-in-out; -webkit-animation:transy 1s infinite ease-in-out; }
         .slide>.arrow2:before {content:""; display: block; width:20px; height:20px; margin-left:3px; margin-top:4px; border:#fff 1px solid; transform:rotate(45deg); -webkit-transform:rotate(45deg); }
-        .point{width:40px;height:40px;position:absolute;}
+        .point{width:40px;height:40px;position:absolute;display: none;}
         .point_1{bottom:30%;}  .point_2{bottom:8%;left:64%}  .point_3{bottom:28%;left:42%}  .point_4{top:28%;right:16%}  .point_5{top:46%;right:38%}  .point_6{top:66%;right:40%}  .point_7{bottom:28%;right:58%}  .point_8{top:36%;right:26%}  .point_9{bottom:26%;left:12%}  .point_0{bottom:12%;left:36%}
         .dialog_wrap {display:flex; align-items:center; justify-content:center; position:absolute; top:0; left:0; width:100%; height:100%; perspective:1300px; -webkit-perspective:1300px; pointer-events:none; }
         .dialog_wrap>.dialog_under { position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:auto; display:none; }
@@ -57,7 +58,7 @@
         .bg{padding-top:50px;box-sizing:border-box;text-align:center;height:886px;width: 524px;background-color:rgba(0,0,0,.8);}
         .bg2{box-sizing:border-box;width:708px;height:246px;background-color:rgba(0,0,0,.8);}
         .bg2>img{margin:28px 0 0 24px;}
-        .btn_img{width:182px;height:44px;border:4px solid #000;position: absolute;bottom:27%;border-radius:36px;text-align:center;}
+        .btn_img{display: none;width:182px;height:44px;border:4px solid #000;position: absolute;bottom:27%;border-radius:36px;text-align:center;}
         .product_detail{margin-top:76px;position:relative;z-index:1000}
         .title_1{font-size: 3.4em;}
         .title_2{font-size: 2.8em;}
