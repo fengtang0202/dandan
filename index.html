@@ -46,7 +46,7 @@
         .slide>.arrow2 { width:28px; height:14px; margin:0 auto 2px; overflow:hidden; animation:transy 1s infinite ease-in-out; -webkit-animation:transy 1s infinite ease-in-out; }
         .slide>.arrow2:before {content:""; display: block; width:20px; height:20px; margin-left:3px; margin-top:4px; border:#fff 1px solid; transform:rotate(45deg); -webkit-transform:rotate(45deg); }
         .point{width:50px;height:50px;position:absolute;display:none;}
-        .point_1{bottom:30%;}  .point_2{bottom:7%;left:66%}  .point_3{bottom:28%;left:42%}  .point_4{top:28%;right:15%}  .point_5{top:45%;right:35%}  .point_6{top:66%;right:36%}  .point_7{bottom:28%;right:54%}  .point_8{top:36%;right:26%}  .point_9{bottom:26%;left:12%}  .point_0{bottom:12%;left:36%}
+        .point_1{bottom:31%;left:49%;}  .point_2{bottom:7%;left:82%}  .point_3{bottom:28%;left:42%}  .point_4{top:28%;right:15%}  .point_5{top:45%;right:35%}  .point_6{top:66%;right:36%}  .point_7{bottom:28%;right:54%}  .point_8{top:36%;right:26%}  .point_9{bottom:26%;left:12%}  .point_0{bottom:12%;left:36%}
         .dialog_wrap {display:flex; align-items:center; justify-content:center; position:absolute; top:0; left:0; width:100%; height:100%; perspective:1300px; -webkit-perspective:1300px; pointer-events:none; }
         .dialog_wrap>.dialog_under { position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:auto; display:none; }
         .dialog_wrap>.dialog { position:absolute; -webkit-transform-style:preserve-3d; transform-style:preserve-3d; pointer-events:auto; }
@@ -56,10 +56,8 @@
             -webkit-transform-origin:0 100%;  transform-origin:0 100%; opacity:0; -webkit-transition:all 0.4s ease-in-out; transition:all 0.4s ease-in-out; }
         .dialog_wrap>.dialog.tag.show {-webkit-transform:translateZ(0) translateX(-50%) translateY(-50%) rotateY(0deg); transform:translateZ(0) translateX(-50%) translateY(-50%) rotateY(0deg); opacity:1;}
         .bg{padding-top:50px;box-sizing:border-box;text-align:center;height:886px;width: 524px;background-color:rgba(0,0,0,.8);}
-        .bg2{box-sizing:border-box;width:708px;height:246px;background-color:rgba(0,0,0,.8);}
-        .bg2>img{margin:28px 0 0 24px;}
         .btn_img{display: none;width:182px;height:44px;border:4px solid #000;position: absolute;bottom:27%;border-radius:36px;text-align:center;}
-        .product_detail{margin-top:76px;position:relative;z-index:1000}
+        .product_detail{margin-top:48px;position:relative;z-index:1000}
         .title_1{font-size: 3.4em;}
         .title_2{font-size: 2.8em;}
         .title_3{font-size:2.2em;}
@@ -67,9 +65,6 @@
         /*.title_1:before{content: "";position:absolute;left:30.5%;width:14px;height:22px;border-width:11px  0  0 11px;border-color:#fff;border-style:solid;}*/
         /*.title_1:after{content: "";position:absolute;top:8.5%;right:30.5%;width:14px;height:22px;border-width:0  11px 11px 0;border-color:#fff;border-style:solid;}*/
         .product_detail_1{height:188px;width:484px;margin-top:18px;float: right;box-sizing: border-box;}
-        .title_6_1{font-size:2.8em;}
-        .title_6_2{font-size: 2.4em;}
-        .title_6_3{font-size: 2em;}
         .line:after{content: '──';color: white;display: block;font-size: 20px;}
          #jump_btn{font-size:24px;line-height: 44px;color:#000;}
         /*点击更多的美图,next img-page效果是右滑动*/
@@ -190,25 +185,25 @@
         <img class="point point_7" src="./images/dd.gif" alt="">
         <div class="dialog_wrap">
          <div class="dialog tag tag5">
-             <div class=" bg2">
-                 <img  src="images/d6-3_03.jpg">
-                 <div class="product_detail_1">
-                       <strong class="title_6_1">感应遥控手柄</strong>
-                       <p class="title_6_2 line">30秒后自动设防</p>
-                     <p class="title_6_3">
-                         遥控器有效感应距离3米，电动车自动设防撤防;<br>
-                         若未按设防键，离开爱车感应距离，30秒后自动设防。
+             <div class=" bg">
+                 <img  src="images/d6-3_03.png">
+                 <div class="product_detail">
+                       <strong class="title_1">「感应遥控手柄」</strong>
+                       <p class="title_2 line">30秒后自动设防</p>
+                     <p class="title_3">
+                         遥控器有效感应距离3米，<br>电动车自动设防撤防;
+                         若未按设防键，<br>离开爱车感应距离，30秒后自动设防。
                      </p>
                  </div>
              </div>
           </div>
             <div class="dialog tag tag6">
-                <div class=" bg2">
-                    <img  src="images/d6-1_03.jpg">
-                    <div class="product_detail_1">
-                        <strong class="title_6_1">9管黑金刚控制器</strong>
-                        <p class="title_6_2 line">双板PCB布局，IP67级防水</p>
-                        <p class="title_6_3">
+                <div class=" bg">
+                    <img  src="images/d6-1_03.png">
+                    <div class="product_detail">
+                        <strong class="title_1">9管黑金刚控制器</strong>
+                        <p class="title_2 line">双板PCB布局，IP67级防水</p>
+                        <p class="title_3">
                             一秒连接，线束装配更加方便;<br>
                             超强耐高温，-30-85℃温漂稳定，防烧车。
                         </p>
@@ -216,14 +211,14 @@
                 </div>
             </div>
             <div class="dialog tag tag7">
-                <div class="bg2">
-                    <img  src="images/d6-2_03.jpg">
-                    <div class="product_detail_1">
+                <div class="bg">
+                    <img  src="images/d6-2_03.png">
+                    <div class="product_detail">
                         <strong class="title_6_1">7寸动力电机</strong>
-                        <p class="title_6_2 line">450W加强型电机，7寸电机直径</p>
-                        <p class="title_6_3">
-                            动力输出依然强劲，将高效工作区域加宽;<br>
-                            缩短高耗电时间，节能省电，延长续行里程。
+                        <p class="title_2 line">450W加强型电机，7寸电机直径</p>
+                        <p class="title_3">
+                            动力输出依然强劲，<br>将高效工作区域加宽;
+                            缩短高耗电时间，<br>节能省电，延长续行里程。
                         </p>
                     </div>
                 </div>
@@ -240,42 +235,43 @@
         <img class="point point_0" src="./images/dd.gif" alt="">
         <div class="dialog_wrap">
             <div class="dialog tag tag8">
-                <div class=" bg2">
-                  <img  src="images/d7-1_03.jpg">
-                    <div class="product_detail_1">
-                        <strong class="title_6_1">液晶仪表</strong>
-                        <p class="title_6_2 line">物理指示</p>
-                        <p class="title_6_3">
-                            全新造型大屏液晶仪表，集电量，速度，<br>总里程于一体；<br>
-                            大界面液晶屏，数字字号加大，内容更易识别，<br> 反应速度快。
+                <div class=" bg">
+                  <img  src="images/d7-1_03.png">
+                    <div class="product_detail">
+                        <strong class="title_1">「液晶仪表」</strong>
+                        <p class="title_2 line">物理指示</p>
+                        <p class="title_3">
+                            全新造型大屏液晶仪表，集电量，速度，<br>总里程于一体；
+                            大界面液晶屏，<br>数字字号加大，内容更易识别，反应速度快。
                         </p>
                     </div>
                 </div>
             </div>
             <div class="dialog tag tag9">
-                <div class=" bg2">
-                    <img  src="images/d7-3_03.jpg">
-                    <div class="product_detail_1">
-                        <strong class="title_6_1">6L大容量</strong>
-                        <p class="title_6_2 line">高易用性尾箱</p>
-                        <p class="title_6_3">
+                <div class=" bg">
+                    <img  src="images/d7-3_03.png">
+                    <div class="product_detail">
+                        <strong class="title_1">「6L大容量」</strong>
+                        <p class="title_2 line">高易用性尾箱</p>
+                        <p class="title_3">
                             后尾箱带锁，安全出行；<br>
-                            大容量后尾箱，可放置随身物品，轻身出行。
+                            大容量后尾箱，<br>可放置随身物品，轻身出行。
                         </p>
                     </div>
                 </div>
             </div>
             <div class="dialog tag tag0">
-                <div class="bg2">
-                    <img  src="images/d7-2_03.jpg">
-                    <div class="product_detail_1">
-                        <strong class="title_6_1">后双灯</strong>
-                        <p class="title_6_2 line">仿生眼后尾灯+猫爪型后转向灯</p>
-                        <p class="title_6_3" >
-                            #后尾灯#&nbsp;&nbsp;&nbsp;全新“电眼”造型，拥有刹车灯与夜 <br>
-                        <p class="title_6_3" style="margin-left:20.8%;">间行车灯功能，保证夜行安全;</p>
-                         <p class="title_6_3">#转向灯#&nbsp;&nbsp;&nbsp;可爱Q萌，增加双闪功能，警示，转
-                        <p class="title_6_3" style="margin-left:20.8%;">向优先，保证驾驶安全；</p>
+                <div class="bg">
+                    <img  src="images/d7-2_03.png">
+                    <div class="product_detail">
+                        <strong class="title_1">「后双灯」</strong>
+                        <p class="title_2 line">仿生眼后尾灯+猫爪型后转向灯</p>
+                        <p class='title_3'>#后尾灯#</p>
+                        <p class="title_3">
+                            全新“电眼”造型，拥有刹车灯与夜 <br>
+                        <p class="title_3">间行车灯功能，保证夜行安全;</p>
+                        <p class='title_3'>#转向灯#</p>
+                         <p class="title_3">可爱Q萌，增加双闪功能，警示，转<br>向优先，保证驾驶安全；</p>
                         </p>
                     </div>
                 </div>
